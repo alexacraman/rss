@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content%}
+
+
+
+
+
+<div class="container mx-auto sulibg" style="width:400px;margin-top: 150px;">
+    <div class="row">
+        <div class="col " >
+
+                {% if form.errors %}
+                <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                <form method="post" class="form-group">
+                  
+                      {% csrf_token %}
+                      <table class="table table-hover table-sm">
+                        <thead class="thead-light">
+                          <tr>
+                        <th scope="col"><i class="fas fa-sign-in-alt"></i>Login</th>
+                        <th scope="col"></th>
+                      </tr>
+                      
+                        </thead>
+                        <tr>
+                            <td><i class="fa fa-user"></i>{{ form.username.label_tag }}</td>
+                            <td>{{ form.username }}</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa fa-user-lock"></i>{{ form.password.label_tag }}</td>
+                            <td >{{ form.password }}</td>
+                        </tr>
+                        </table>
+                        <input type="submit" value="login" class="btn btn-block btn-secondary">
+                
+                </form>
+        
+        
+        </div>
+    
+    </div>
+</div>
+
+
+<div class="container mx-auto" style="width:400px;margin-top: 150px">
+    <div class="row">
+        <div class="col" >
+
+<br>
+    <small  style="color: grey">Forgot your password?<br> Please use the link below to reset it.</small><br>
+    <a class="text-secondary" href="{% url 'password_reset' %}">Reset Password</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

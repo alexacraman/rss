@@ -1,0 +1,401 @@
+{% extends "base.html" %}
+{% include "navbar.html" %}
+{% load static %}
+{% block content %}
+
+<script>
+    $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+</script>
+
+<div style="text-align:center" onload="alertRed()"><h2>Images of my RSS</h2></div>
+<div class="container"><p>I was encouraged to do this as I found it so helpful seeing other sufferers pictures and their healing journey. It also prepared me for how ugly TSW can get and allayed some of the fears I would have had, had I not seen other peoples picture blogs. Please be aware that some of the following pictures are alarming.</p></div>
+<div style= "text-align:center">Months 1-2</div>
+<div class="container">
+  <div class="row">
+    <a href="{% static 'images/IMG_1320.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img   src="{% static 'images/IMG_1320.jpg' %}"  alt="Innerthigh burn" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images/IMG_1566.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="arm creases" src="{% static 'images/IMG_1566.jpg' %}"  class="img-fluid rounded">
+    </a><br>
+    <a href="{% static 'images/IMG_1675.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="within days of ceasing TS inflammation begins to rise on my neck." src="{% static 'images/IMG_1675.jpg' %}" class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images/cheeks.jpg'  %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="painful inflammation on the face" src="{% static 'images/cheeks.jpg'  %}" class="img-fluid rounded">
+    </a>
+  </div>
+  <div class="row">
+    <a href="{% static 'images/IMG_2790.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="forearms heavioy inflamed" src="{% static 'images/IMG_2790.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images/IMG_1970.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="swollen-ankles" src="{% static 'images/IMG_1970.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images/IMG_2386.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="swollen legs lasted for months." src="{% static 'images/IMG_2386.jpg' %}"  class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images/IMG_0492.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="swollen legs lasted for months." src="{% static 'images/IMG_0492.jpg' %}" class="img-fluid rounded">
+    </a>
+  </div>
+    <div class="row">
+    <a href="{% static 'images/IMG_2313.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="back" src="{% static 'images/IMG_2313.jpg' %}"  class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images/face.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="picture-ankles" src="{% static 'images/face.jpg' %}"  class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images/armleg2.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="picture" src="{% static 'images/armleg2.jpg' %}" class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images/hopleg.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="picture-legs" src="{% static 'images/hopleg.jpg' %}" class="img-fluid rounded">
+    </a>
+  </div>
+
+<br>
+
+<div style= "text-align:center">Months 3-4</div>
+ <div class="row">
+    <a href="{% static 'images2/1.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Arm burn" src="{% static 'images2/1.jpg' %}"  class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images2/2.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="severly dry face" src="{% static 'images2/2.jpg' %}"  class="img-fluid rounded">
+    </a><br>
+    <a href="{% static 'images2/3.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Facr inflammation and trying upper body wet wraps" src= "{% static 'images2/3.jpg' %}"  class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images2/4.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Dryness on my face gets worse" src= "{% static 'images2/4.jpg' %}"  class="img-fluid rounded">
+    </a>
+  </div>
+
+<div class="row">
+    <a href="{% static 'images2/5.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs swollen and red" src="{% static 'images2/5.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images2/6.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="My worst day seeing my arms like this" src="{% static 'images2/6.jpg' %}"  class="img-fluid rounded">
+    </a><br>
+    <a href="{% static 'images2/7.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Yuk!" src= "{% static 'images2/7.jpg' %}" class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images2/8.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Arm inflamming again" src="{% static 'images2/8.jpg' %}" class="img-fluid rounded">
+    </a>
+  </div>
+
+<div class="row">
+    <a href="{% static 'images2/9.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Red burning face and arm" src="{% static 'images2/9.jpg' %}" class="img-fluid rounded">
+    </a>
+    <a href="{% static 'images2/10.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Red burning fce" src="{% static 'images2/10.jpg' %}"  class="img-fluid rounded">
+    </a><br>
+    <a href="{% static 'images2/11.jpg' %}" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Face swollen and red" src="{% static 'images2/11.jpg' %}" class="img-fluid rounded">
+    </a>
+      <a href="{% static 'images2/12.jpg' %}"  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Awful skin on my arms" src="{% static 'images2/12.jpg' %}" class="img-fluid rounded">
+    </a>
+  </div>
+
+<br>
+
+
+<div style= "text-align:center">Months 5-6</div>
+
+<div class="row">
+    <a href=" {% static 'images3/1.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images3/1.jpg' %} " class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images3/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/2.jpg' %} "  class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images3/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images3/4.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/4.jpg' %} "  class="img-fluid rounded">
+    </a>
+  </div>
+  <div class="row">
+    <a href=" {% static 'images3/v_red.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Red burn" src=" {% static 'images3/v_red.jpg' %} " class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images3/v_red2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Red burn" src=" {% static 'images3/v_red2.jpg' %} "  class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images3/v_red3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Red burn" src=" {% static 'images3/v_red3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images3/v_red4.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Red burn burn" src=" {% static 'images3/v_red4.jpg' %} "  class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+
+<div style= "text-align:center">Months 7-8</div>
+
+
+<div class="row">
+    <a href=" {% static 'images3/6.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images3/6.jpg' %} " class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images3/7.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/7.jpg' %} "  class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images3/8.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images3/8.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images3/4.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/40.jpg' %} "  class="img-fluid rounded">
+    </a>
+  </div>
+
+<br>
+
+<div style= "text-align:center">Months 9-10</div>
+
+
+<div class="row">
+    <a href=" {% static 'images3/9.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images3/9.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images3/10.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/10.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images3/11.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images3/11.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images3/12.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images3/12.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+
+<br>
+
+<div style= "text-align:center">Months 11-12</div>
+
+<div class="row">
+    <a href=" {% static 'images4/5.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images4/5.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images4/6.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images4/6.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images4/7.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images4/7.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images4/8.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images4/8.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+
+
+<br>
+
+
+
+
+
+
+
+
+<div style= "text-align:center">Months 13-14</div>
+
+<div class="row">
+    <a href=" {% static 'images4/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images4/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images4/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images4/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images4/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images4/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images4/4.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images4/4.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+
+
+<br>
+
+
+<div style= "text-align:center">Months 16-17</div>
+
+<div class="row">
+    <a href=" {% static 'images5/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images5/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images5/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images5/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images5/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images5/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images5/4.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images5/4.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+
+<br>
+<div style= "text-align:center">Months 18-19</div>
+
+<div class="row">
+    <a href=" {% static 'images6/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images6/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images6/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images6/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images6/3.jpeg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Innerthigh burn" src=" {% static 'images6/3.jpeg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images6/4.jpeg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Innerthigh burn" src=" {% static 'images6/4.jpeg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+    <div style= "text-align:center">Months 20-21</div>
+
+<div class="row">
+    <a href=" {% static 'images7/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images7/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images7/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images7/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images7/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images7/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images7/4.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images7/4.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+<div style= "text-align:center">Months 22-23</div>
+
+<div class="row">
+    <a href=" {% static 'images8/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images8/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images8/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images8/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images8/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images8/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images8/4.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images8/4.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+<div style= "text-align:center">Months 24-25</div>
+
+<div class="row">
+    <a href=" {% static 'images8/5.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images8/5.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images8/6.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images8/6.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images8/7.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images8/7.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images8/8.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images8/8.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+
+<div style= "text-align:center">Months 26-27</div>
+
+<div class="row">
+    <a href=" {% static 'images9/1.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images9/1.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images9/2.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images9/2.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images9/3.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images9/3.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images9/4.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images9/4.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+
+<div style= "text-align:center">Months 28-29</div>
+
+<div class="row">
+    <a href=" {% static 'images9/5.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images9/5.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images9/6.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images9/6.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images9/7.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images9/7.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images9/8.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images9/8.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+  <div class="row">
+    <a href=" {% static 'images9/9.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images9/9.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images9/10.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images9/10.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images9/11.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images9/11.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images9/12.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images9/12.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+<br>
+<div style= "text-align:center">Months 30-31</div>
+
+<div class="row">
+    <a href=" {% static 'images9/13.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images9/13.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images9/14.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images9/14.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images9/15.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images9/15.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images9/16.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images9/16.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+  <br>
+  <div class="row">
+    <a href=" {% static 'images9/17.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="face itch" src=" {% static 'images9/17.jpg' %} "  class="img-fluid rounded">
+    </a>
+    <a href=" {% static 'images9/18.jpg' %} "  data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="more face itch" src=" {% static 'images9/18.jpg' %} "   class="img-fluid rounded">
+    </a><br>
+    <a href=" {% static 'images9/19.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+       <img alt="Legs still red" src=" {% static 'images9/19.jpg' %} " class="img-fluid rounded">
+    </a>
+      <a href=" {% static 'images9/20.jpg' %} " data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+      <img alt="Legs still red" src=" {% static 'images9/20.jpg' %} " class="img-fluid rounded">
+    </a>
+  </div>
+  <br>
+    </div>
+
+    
+{% endblock %}

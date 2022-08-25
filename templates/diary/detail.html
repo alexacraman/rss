@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<small>
+    {{ post.created_on.date }} |&nbsp;
+</small>
+    <div class='row'>
+
+
+     {% include 'diary/list-inline.html' with blog_post=object detail=True %}
+
+    {% if request.user.is_authenticated %}
+        {% if request.user.is_staff %}
+        <div class="col-7 mx-auto">
+            <a href='{{ object.get_edit_url }}'>Edit</a>
+            <a href='{{ object.get_delete_url }}'>Delete</a>
+        </div>
+        {% endif %}
+    {% endif %}
+
+    </div>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-7 mx-auto">
+
+    <h3>Leave a comment:</h3>
+    <form action="." method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.author }}
+        </div>
+        <div class="form-group">
+            {{ form.body }}
+        </div>
+        {% if user.is_authenticated %}
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+        {% else %}
+        <small>You must be logged in to comment</small>
+        {% endif %}
+    </form>
+    <h3>Comments:</h3>
+    {% for comment in comments %}
+    <p>
+        On {{comment.created_on.date }}&nbsp;
+        <b>{{ comment.author }}</b> wrote:
+    </p>
+    <p>{{ comment.body }}</p>
+    <hr>
+    {% endfor %}
+</div>
+</div>
+</div>
+{% endblock %}
+
+

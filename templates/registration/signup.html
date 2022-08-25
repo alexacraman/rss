@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+       
+
+
+<div class="container mx-auto" style="width:400px;margin-top: 150px">
+    <div class="row">
+        <div class="col" >
+
+        
+          <form method="post" class="form-group">
+            
+                {% csrf_token %}
+                <table class="table table-hover table-sm">
+                  <thead class="thead-light">
+                    <tr>
+                  <th scope="col"><i class="fa fa-user-plus"></i>Sign up</th>
+                  <th scope="col"></th>
+                </tr>
+                
+                  </thead>
+                  <tr>
+                      <td><i class="fa fa-user"></i>{{ form.username.label_tag }}</td>
+                      <td>{{ form.username }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-envelope"></i>{{ form.email.label_tag }}</td>
+                    <td>{{ form.email}}</td>
+                </tr>
+                  <tr>
+                      <td><i class="fa fa-unlock"></i>{{ form.password1.label_tag }}</td>
+                      <td >{{ form.password1 }}</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-lock"></i>{{ form.password2.label_tag }}</td>
+                    <td >{{ form.password2 }}</td>
+                </tr>
+                  </table>
+                  <input type="submit" value="Sign Up" class="btn btn-block btn-secondary">
+
+                  {% for field in form.visible_fields %}
+    <div class="fieldWrapper">
+        {{ field.errors }}
+        
+    </div>
+{% endfor %}
+          
+          </form>
+        
+        </div>
+    
+    </div>
+</div>
+
+
+
+{% endblock %}

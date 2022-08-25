@@ -1,0 +1,149 @@
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+{% url 'contact' as contact_url %}
+{% url 'gallery' as gallery_url %}
+{%  url 'diary' as diary_url %}
+{% url 'login' as login_url %}
+{% url 'logout' as logout_url %}
+{% url 'signup' as signup_url %}
+
+
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-dark bg-darker" >
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse"  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item {% if request.path == home_url %}active{% endif %}">
+        <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% if request.path == about_url %}active{% endif %}">
+        <a class="nav-link" href="{{ about_url }}">About</a>
+      </li>
+      <li class="nav-item {% if request.path == contact_url %}active{% endif %}">
+        <a class="nav-link" href="{{ contact_url }}">Contact</a>
+      </li>
+        <li class="nav-item {% if request.path == gallery_url %}active{% endif %}">
+        <a class="nav-link" href="{{ gallery_url }}">Gallery</a>
+      </li>
+        <li class="nav-item {% if request.path == diary_url %}acitve{% endif %}">
+        <a class="nav-link" href="{{ diary_url }}">Diary</a>
+      </li>
+      <form class="form-inline my-2 my-lg-0" action='/searchfhforit/'>
+        <input class="form-control mr-sm-2" type="search" name='q' placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </ul>
+   
+
+
+    </ul>  
+    
+        {% if user.is_authenticated %}
+      <ul class="navbar-nav " style="color: #343E7A;">
+        <li class="nav-item {% if request.path == logout_url %}active{% endif %}">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+        <li class="nav-item {% if request.path == password_change_url %}active{% endif %}">
+        <a class="nav-link" href="{% url 'password_change' %}">Change Password</a>
+      </li>
+    </ul>
+    
+        
+        {% else %}
+
+      <ul class="navbar-nav " style="color: #343E7A;">    
+        <li class="nav-item {% if request.path == login_url %}active{% endif %}">
+            <a class="nav-link" href="{% url 'login' %}" > Login</a>
+      </li>
+        <li class="nav-item {% if request.path == signup_url %}active{% endif %}">
+            <a class="nav-link" href="{% url 'signup' %}" > Signup</a>
+      </li>
+     </ul>
+        {% endif %}
+      
+    
+      
+      
+      </div>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-darker">
+  <div class="container-fluid">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item {% if request.path == home_url %}active{% endif %}">
+          <a class="nav-link" href="{{ home_url }}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item {% if request.path == about_url %}active{% endif %}">
+          <a class="nav-link" href="{{ about_url }}">About</a>
+        </li>
+        <li class="nav-item {% if request.path == contact_url %}active{% endif %}">
+          <a class="nav-link" href="{{ contact_url }}">Contact</a>
+        </li>
+          <li class="nav-item {% if request.path == gallery_url %}active{% endif %}">
+          <a class="nav-link" href="{{ gallery_url }}">Gallery</a>
+        </li>
+          <li class="nav-item {% if request.path == diary_url %}acitve{% endif %}">
+          <a class="nav-link" href="{{ diary_url }}">Diary</a>
+          
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          {% if user.is_authenticated %}
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class=" {% if request.path == logout_url %}active{% endif %}">
+              <a class="dropdown-item" href="{% url 'logout' %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+                <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z"/>
+              </svg> Logout</a>
+            </li>
+              <li class=" {% if request.path == password_change_url %}active{% endif %}">
+              <a class="dropdown-item" href="{% url 'password_change' %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-lock-fill" viewBox="0 0 16 16">
+                <path d="M7 6a1 1 0 0 1 2 0v1H7V6zM6 8.3c0-.042.02-.107.105-.175A.637.637 0 0 1 6.5 8h3a.64.64 0 0 1 .395.125c.085.068.105.133.105.175v2.4c0 .042-.02.107-.105.175A.637.637 0 0 1 9.5 11h-3a.637.637 0 0 1-.395-.125C6.02 10.807 6 10.742 6 10.7V8.3z"/>
+                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-2 6v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V8.3c0-.627.46-1.058 1-1.224V6a2 2 0 1 1 4 0z"/>
+              </svg> Change Password</a>
+            </li>
+          </ul>
+          {% else %}
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li class=" {% if request.path == login_url %}active{% endif %}">
+              <a class="dropdown-item" href="{% url 'login' %}" >  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+              </svg> Login</a>
+        </li>
+          <li class=" {% if request.path == signup_url %}active{% endif %}">
+              <a class="dropdown-item" href="{% url 'signup' %}" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z"/>
+              </svg> Signup</a>
+        </li>
+          
+        </ul>
+
+        {% endif %}
+        </li>
+        
+      </ul>
+      <form class="d-flex" action='/search/'>
+        <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <form class="form-inline my-2 my-lg-0" action='/searchfhforit/'>
+  <input class="form-control mr-sm-2" type="search" name='q' placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+</form> -->
