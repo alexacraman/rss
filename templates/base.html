@@ -3,8 +3,8 @@
 <html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
    
-    <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/bcb7761e02d4c8b437f905bee4d23169.js"></script>
-
+    
+    <link rel="stylesheet" href="{% static 'css/cookieconsent.css' %}" media="print" onload="this.media='all'">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651966816117816"
     crossorigin="anonymous"></script>
     <!-- Required meta tags -->
@@ -59,10 +59,6 @@
             {% endblock %}
     {% include "footer.html"%}
    {% include "js.html" %}
-   <!-- <div id="cookieConsent" onload="slideIn();">
-    <p>This website stores data such as cookies to enable necessary site functionality and analytics. <a href="#" class="btn btn-link btn-sm">Cookie</a><a href="#" class="btn btn-link btn-sm">Privacy</a></p>
-      <button class="btn btn-sm" id='cookieBtn'>Close</button>
-  
-  </div> -->
+ 
   </body>
 </html>
