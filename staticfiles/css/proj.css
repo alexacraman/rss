@@ -1,8 +1,8 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
 body{
-font-family: 'Roboto', sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 font-size: 1rem;
 }
 p{
@@ -15,70 +15,141 @@ p{
 }
 .flex-item-right {
     position: relative;
-    z-index: -1;  
+    z-index: 2;  
 } 
 .moviePicContainer{
-    background: #fff;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-gap:1.5rem;
-    transform: rotate(40deg);
-    /* overflow: hidden; */
-    z-index: -2;
-    
-    }
-    .moviePic{
-    border: 3px solid #fff;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 5px #343d52;
-    margin: auto;
-    height: 150px;    
-    overflow-x: hidden;
-    
-}
-    .pic1{
-    grid-column: span 3;
-    background: url('../images3/3.jpg') ; 
-    background-position: center;
-    background-size: cover;
+position:relative;
+background: #fff;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-gap:1.5rem;
+transform: rotate(40deg);
 
-    width: 501px;  
-    animation: shinters 1s ;            
-    }
-    .pic2{
-        grid-column: span 1;
-        background: url('../images/6.jpg')  ; 
-        background-position: center;
-        background-size: cover;
-        width: 301px;    
-        animation: shinters 1s ;           
-    }
-    .pic3{
-    grid-column: 2/3;
-    width: 100px;
-    animation: shonters 2s ;
+z-index: -2;
+/* overflow: hidden; */
+}
+.moviePic{
+border: 3px solid #fff;
+border-radius: 10px;
+box-shadow: 1px 1px 10px 5px #343d52;
+margin: auto;
+height: 150px;    
+overflow-x: hidden;
+}
+.pic1{
+width: 501px;  
+grid-column: span 3;
+animation: shinters 1s ; 
+background-color:rgba(0,0,0,0.0);
+transition: 1s background-color;
+}
+.pic1:hover{
+transition: 1s background;
+background-color: transparent;
+background: url('../images3/3.jpg') ; 
+background-position: center;
+background-size: cover;   
+}
+.pic1::after{
+color:grey;
+content:"Warning. Graphic images of poorly skin. Hover to view";
+}
+.pic1:hover::after{
+    content:" ";
+}
+.pic2{
+    width: 301px;    
+    animation: shinters 1s ; 
+    grid-column: span 1;
+    background-color:rgba(0,0,0,0.0);
+    transition: 1s background-color;
+}
+.pic2:hover{
+    transition: 1s background;
+    background-color: transparent;  
+    background: url('../images/6.jpg')  ; 
+    background-position: center;
+    background-size: cover;           
+}
+.pic2::after{
+   
+    color:grey;
+    content:"Warning. Graphic images of poorly skin. Hover to view "; 
+}
+.pic2:hover::after{
+content:" ";
+}
+.pic3{
+grid-column: 2/3;
+width: 100px;
+animation: shonters 2s ;
+background-color:rgba(0,0,0,0.0);
+transition: 1s background-color;
+        
+} 
+.pic3:hover{
+    transition: 1s background;
+    background-color: transparent;  
     background: url('../images3/9.jpg') no-repeat;   
-    background-size: cover;         
-    } 
+    background-size: cover;  
+    /* background-position: center; */
+}
+.pic3::after{
+    
+    color:grey;
+    content:"Warning. Graphic images of poorly skin. Hover to view "; 
+}
+.pic3:hover::after{
+    content:" ";
+}
     .pic4{
     grid-column: 3/4;
     width: 300px;
     animation: shanters 1s ;
-        background: url('../images3/v_red.jpg') no-repeat;             
+    background-color:rgba(0,0,0,0.0);
+    transition: 1s background-color;
+    }
+    .pic4:hover{
+        transition: 1s background;
+    background-color: transparent;  
+        background: url('../images3/v_red.jpg') no-repeat;  
+        background-size: cover;  
+        /* background-position: center;            */
     } 
+    .pic4::after{
+      
+        color:grey;
+        content:"Warning. Graphic images of poorly skin. Hover to view "; 
+    }
+    .pic4:hover::after{
+        content:" ";
+    }
     .pic5{
-        position: relative;
     grid-column: 1 / 4;
     width: 500px;
-    background: url('../images3/v_red2.jpg') no-repeat ;     
+    background-color:rgba(0,0,0,0.0);
+    transition: 1s background-color;
     animation: shenters 2s;
     animation-fill-mode: forwards;
     /* transform:translateX(10rem);  
     transition:transform 1s ease 2s; */
     }
+    .pic5:hover{
+        transition: 1s background;
+        background-color: transparent;  
+        background: url('../images3/v_red2.jpg') no-repeat ;   
+    }
+    .pic5::after{
+        
+        color:grey;
+        content:"Graphic images. Viewer discretion advised "; 
+    }
+    .pic5:hover::after{
+        content:" ";
+    }
 
 
-    #myTopBtn{position: fixed; display: none; z-index: 1; bottom:20px ;right:30px ;}
+    #myTopBtn{position: fixed; display: none; z-index: 1; bottom:20px ;right:5px; border-radius: 5%;}
     
     .but{
         display: inline;
@@ -167,14 +238,7 @@ p{
     top:0;
     left:0;   
 }
-iframe{
-    border-radius: 10px;
-    padding: 0;
-    display:block;
-    margin:auto;
-    width:373px;
-        height:210px;
-}
+
 
 
 /* about page */
@@ -220,13 +284,13 @@ text-decoration:none;
 
 }
 nav a:hover{
-color:grey;
+color: #0dcaf0;
 }
 nav a::after{
 content:'';
 display: block;
 height:1px;
-background: grey;
+background: #0dcaf0;
 transform:scale(0,1);
 transform-origin: left;
 transition: transform ease-in-out 700ms;
@@ -243,7 +307,7 @@ transform:scale(1,1);
    
 }
 .child-snap{
-    scroll-snap-align:center;
+    scroll-snap-align:start;
 }
 
 
@@ -266,4 +330,20 @@ transform:scale(1,1);
     font-size: 0.5rem;
     
     
+}
+
+.box-shad{
+    box-shadow: 2px 2px 2px 
+    #0dcaf0;
+}
+
+
+
+/* for problems with the galaxy fold */
+
+
+@media screen and (min-width:280px)and (max-width: 320px){
+    .nsa{
+        width: 256px;
+    }
 }

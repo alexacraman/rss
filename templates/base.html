@@ -2,11 +2,10 @@
 <!doctype html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
-   
-    
-    <link rel="stylesheet" href="{% static 'css/cookieconsent.css' %}" media="print" onload="this.media='all'">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2651966816117816"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous" type="text/plain" data-cookiecategory="targeting"></script>
+    <link rel="stylesheet" href="{% static 'css/cookieconsent.css' %}" media="print" onload="this.media='all'">
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +34,7 @@
       <link rel="stylesheet" type="text/css" href="{% static 'css/proj.css' %}">
       <link rel="icon" href="{% static 'images/rs.png' %}" type="image/icon">
       <!-- Fontawesome CSS -->
-      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+      <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' data-cc="necessary"/>
 
     <title>RSS/TSW</title>
   </head>
@@ -52,7 +51,7 @@
   </div>
 {% endfor %}
   <body>
-    <button class="btn btn-cool" onclick="topFunction()" id="myTopBtn" title="Go to top">&#8657;</button>
+    <button class="border border-info  bg-dark text-info" onclick="topFunction()" id="myTopBtn" >&#8657;</button>
    
       {% block content %}
       

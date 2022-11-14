@@ -7,18 +7,20 @@
 {% if title %}
     <h1>{{ title }}</h1>
 {% endif %}
-<div class='container mt-5'>
+<div class='container mt-5 '>
     <div class="row border">
-        <div class="col-12 col-lg-6 bg-darker text-center text-light d-flex align-items-center justify-content-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        
+        <div class="border-info border-2 border col-12 col-lg-6 bg-darker text-center text-light d-flex align-items-center justify-content-center">
+            <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=2&p=22&l=ur1&category=musicunlimited&banner=1RBP2CXEMNSG8KG93E82&f=ifr&linkID=4fafaf63b629865c043ad7141cbdd9ca&t=8c1bc6a1-21&tracking_id=8c1bc6a1-21" width="250" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                 <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-              </svg>
+              </svg> -->
            
         </div>
         <div class="col-12 col-lg-6">
             <form method='POST' action='.' enctype='multipart/form-data' class="form-group p-5"> {% csrf_token %}
                 {{ form.as_p }}
-                <button type='submit' class="btn btn-cool">Submit</button>
+                <button type='submit' class="btn btn-cool border-info border-2 border">Submit</button>
                 <small id="emailHelp" class="form-text text-muted">I will never share your email with anyone else.</small>
             </form> 
         </div>

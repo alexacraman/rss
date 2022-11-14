@@ -1,3 +1,4 @@
+import datetime
 from django.shortcuts import render
 from django.core.exceptions import PermissionDenied
 from django.contrib import messages
@@ -5,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect 
+
+from django.utils import timezone
 
 from .forms import BlogPostModelForm, CommentForm
 from .models import BlogPost, Comment
@@ -21,11 +24,15 @@ def superuser_only(function):
 
 def blog_post_list_view(request):
     qs = BlogPost.objects.all().published().order_by('-publish_date')
+    current_time = timezone.now()
+    start_time = current_time - datetime.timedelta(days=700)
+    blog_post_filter = BlogPost.objects.filter(publish_date__gte=start_time).order_by('-publish_date')
+    blog_post_filter_older = BlogPost.objects.filter(publish_date__lte=start_time).order_by('-publish_date')
     if request.user.is_authenticated:
         my_qs = BlogPost.objects.filter(user=request.user)
         qs = (qs | my_qs).distinct()
     template_name = 'diary/list.html'
-    context = { 'object_list': qs}
+    context = { 'object_list': qs, 'post_filter': blog_post_filter, 'old_filter': blog_post_filter_older}
     return render(request, template_name, context)
 
 

@@ -2,20 +2,24 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
-
+from django.views.decorators.http import require_GET
 from django.urls import reverse_lazy
 from .forms import UserCreationForm, ContactForm
 from django.views import generic
 # Dont Repeat Yourself = DRY
 
-
+from diary.models import BlogPost
 from .forms import ContactForm
 from .settings import DEFAULT_FROM_EMAIL
 
 
 def home(request):
+    latest_post = BlogPost.objects.latest('id')
+    context = {
+        'latest': latest_post
+    }
     
-    return render(request, "home.html" )
+    return render(request, "home.html" , context)
 
 def about(request):
     context = {"title": "About"}
@@ -55,4 +59,15 @@ class SignUpView(generic.CreateView):
 
 def privacy_policy(request):
     return render(request, 'policy.html', {})
+
+def terms_conditions(request):
+    return render(request, 'terms.html', {})
+
+@require_GET
+def robots_txt(request):
+    lines = [
+        "User-Agent: *",
+        "Allow: /",
+    ]
+    return HttpResponse("\n".join(lines), content_type='text_plain')
 

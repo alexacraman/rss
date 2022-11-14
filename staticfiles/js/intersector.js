@@ -8,16 +8,16 @@ window.addEventListener('DOMContentLoaded', () =>{
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            console.log(entry.target)
+            // console.log(entry.target)
             if (entry.isIntersecting){
                 entry.target.classList.add('aniShont');
                 entry.target.classList.add('aniShont05');
                 // return;
             }
-            else{
-                entry.target.classList.remove('aniShont');
-                entry.target.classList.remove('aniShont05');
-            }
+            // else{
+            //     entry.target.classList.remove('aniShont');
+            //     entry.target.classList.remove('aniShont05');
+            // }
             
         })
     })

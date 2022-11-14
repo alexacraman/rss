@@ -4,12 +4,60 @@
 
 
 {% block content %}
+    <div class="container-fluid  bg-dark text-white">
+        
+        <h2 class="text-center ">Blog Posts</h2>
+ 
+    <div class=' d-flex justify-content-evenly flex-wrap'>
+        
+        <div class="col-md-5  text-dark">
+            <h5 class='text-center m-4 text-light'>Latest</h5>
+            {% for object in post_filter %}
+            <div class='border-start border-5 border-secondary mb-3 mt-3 mx-auto box-shad'>
+                <div class='bg-white rounded-end {% if not object.publish_date %} border border-warning text-dark {% endif %}'>
+                   <div class='card-body '>
+                       {% if object.image %}
+                           <a href="{{ object.get_absolute_url }}">
+                                   <img src="{{ object.image.url }}" class=' rounded mx-auto shadow-lg p-2 mb-5 ' height=120px/>
+                           </a>
+                       {% endif %}
+                       <h5 class='card-title'>{{ object.title }}</h5>
+                       <p class='card-text'><small class='text-muted'>{{ object.publish_date }}</small><br>
+                          {{ object.content|truncatewords:30 }}</p>
+                       {% if not detail %}
+                           {% if not object.publish_date %} Draft {% endif %}
+                           <a href="{{ object.get_absolute_url }}" class="btn btn-info">View</a>
+                       {% endif %}
+                   </div>
+               
+                </div>
+                
+               </div>
+               
+                  {% endfor %}
+                  <div class="d-flex justify-content-center">
+                    <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=2&p=42&l=ur1&category=audible&banner=1EGP9NJJ23JF40KW8D82&f=ifr&linkID=5ba1558097aa1e92afc22db63fdd0c73&t=8c1bc6a1-21&tracking_id=8c1bc6a1-21" width="234" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+            
+                   </div>
+        </div>
+        <div class="col-md-4">
+            <h5 class='text-center m-4 text-white '>Archive</h5>
+            <div class="border-start border-4 border-secondary bg-dark bg-gradient rounded-end box-shad">
+                
+            {% for object in old_filter %}
+            <h5><a href="{{ object.get_absolute_url }}" class="btn text-white ">Title: {{object.title|capfirst }}</a></h5>
+            <small class='m-3 text-muted border-bottom border-darker'>Published: {{ object.publish_date }}</small>
+            {% endfor %}
+        </div>
+       
+        </div>
+        <div class="col-md-2 d-none d-md-block">
+            <h5 class='text-center m-4 text-secondary'>Affiliate </h5>
+            <iframe src="https://rcm-eu.amazon-adsystem.com/e/cm?o=2&p=14&l=ur1&category=channels&banner=01SEDM88GBYPTWZ6CKR2&f=ifr&linkID=103b262808c0eb019ecce73929211c06&t=8c1bc6a1-21&tracking_id=8c1bc6a1-21" class="mt-4" width="160" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0" sandbox="allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe>
+        </div>
     
-    <div class='row'>
-    {% for object in object_list %}
-        {% include 'diary/list-inline.html' with blog_post=object truncate=True detail=False %}
-    {% endfor %}
+   
 </div>
-
+</div>
 
 {% endblock %}

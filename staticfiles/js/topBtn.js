@@ -2,7 +2,7 @@ topBtn = document.getElementById('myTopBtn');
         window.onscroll = function() {scrollFunction()}
          function scrollFunction(){
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-            {topBtn.style.display = 'block';
+            {topBtn.style.display = 'inline-block';
             } else {
             topBtn.style.display = 'none';
             }

@@ -1,17 +1,21 @@
 from .base import *
-import os
+import environ
+from pathlib import Path
+
+env = environ.Env()
+environ.Env.read_env(BASE_DIR / '.env')
 
 
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk', 'redsleeves.herokuapp.com']
+ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk', 'red-sleeves.fly.dev']
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'RedSleeves <acramanalex@gmail.com>'
@@ -23,16 +27,15 @@ MANAGERS = (
 )
 
 
-CORS_REPLACE_HTTPS_REFERER      = True
-# HOST_SCHEME                     = "https://"
-# SECURE_PROXY_SSL_HEADER         = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT             = False
-SESSION_COOKIE_SECURE           = True
-CSRF_COOKIE_SECURE              = False
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SESSION_COOKIE_AGE              = 86400 # delete the session cookie after on
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_HSTS_PRELOAD             = True
-SECURE_FRAME_DENY               = True
-SECURE_CONTENT_TYPE_NOSNIFF     = True
-SECURE_BROWSER_XSS_FILTER       = True
-# X_FRAME_OPTIONS                 = True
+
+SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting the session cookie over HTTP accidentally.
+CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
+
+
+SECURE_SSL_REDIRECT             = False

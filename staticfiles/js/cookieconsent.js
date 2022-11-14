@@ -23,7 +23,7 @@
             'auto_language': null,
             'autorun': true,                          // run as soon as loaded
             'page_scripts': true,
-            'hide_from_bots': true,
+            'hide_from_bots': false,
             'cookie_name': 'cc_cookie',
             'cookie_expiration': 182,                 // default: 6 months (in days)
             'cookie_domain': window.location.hostname,       // default: current domain
@@ -309,7 +309,7 @@
              * @returns {NodeListOf<Element>}
              */
             function _getElements(data_role){
-                return (elem || document).querySelectorAll('a[data-cc="' + data_role + '"], button[data-cc="' + data_role + '"]');
+                return (elem || document).querySelectorAll('a[data-cc="' + data_role + '"], button[data-cc="' + data_role + '"], iframe[data-cc="' + data_role + '"]');
             }
 
             /**
@@ -633,6 +633,7 @@
                     description_data = all_blocks[i]['description'],
                     toggle_data = all_blocks[i]['toggle'],
                     cookie_table_data = all_blocks[i]['cookie_table'],
+                    cookie_local_data = all_blocks[i]['cookie_table_local'],
                     remove_cookie_tables = user_config['remove_cookie_tables'] === true,
                     isExpandable = (description_data && 'truthy') || (!remove_cookie_tables && (cookie_table_data && 'truthy'));
 
@@ -783,7 +784,7 @@
                 // if cookie table found, generate table for this block
                 if(!remove_cookie_tables && typeof cookie_table_data !== 'undefined'){
                     var tr_tmp_fragment = document.createDocumentFragment();
-
+                       
                     /**
                      * Use custom table headers
                      */
@@ -813,17 +814,20 @@
                     block_table.appendChild(thead);
 
                     var tbody_fragment = document.createDocumentFragment();
-
+                        
                     // create table content
+                    
+
                     for(var n=0; n<cookie_table_data.length; n++){
                         var tr = _createNode('tr');
-
+                        
                         for(var g=0; g<all_table_headers.length; ++g){
                             // get custom header content
                             obj = all_table_headers[g];
+                            
                             if(obj){
                                 new_column_key = _getKeys(obj)[0];
-
+                               
                                 var td_tmp = _createNode('td');
 
                                 // Allow html inside table cells
@@ -836,7 +840,7 @@
 
                         tbody_fragment.appendChild(tr);
                     }
-
+                    // console.log(tbody_fragment)
                     // append tbody_fragment to tbody & append the latter into the table
                     var tbody = _createNode('tbody');
                     tbody.appendChild(tbody_fragment);
@@ -844,7 +848,7 @@
 
                     block_table_container.appendChild(block_table);
                 }
-
+             
                 /**
                  * Append only if is either:
                  * - togglable div with title
@@ -1026,13 +1030,14 @@
 
             // Retrieve all cookies
             var all_cookies_array = _getCookie('', 'all');
+            
             console.log("all_cookies_array: ",all_cookies_array)
             // delete cookies on 'www.domain.com' and '.www.domain.com' (can also be without www)
             var domains = [_config.cookie_domain, '.'+_config.cookie_domain];
 
             // if domain has www, delete cookies also for 'domain.com' and '.domain.com'
             if(_config.cookie_domain.slice(0, 4) === 'www.'){
-                var non_www_domain = _config.cookie_domain.substr(4);  // remove first 4 chars (www.)
+                var non_www_domain = _config.cookie_domain.substring(4);  // remove first 4 chars (www.)
                 domains.push(non_www_domain);
                 domains.push('.' + non_www_domain);
             }

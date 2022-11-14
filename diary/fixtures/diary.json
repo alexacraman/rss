@@ -1,5 +1,679 @@
 [
 {
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-08-23T14:25:05.650Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "Jak Inhibitors",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-11-04T11:11:48.619Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "Impossible decision.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add blog post",
+    "content_type": 7,
+    "codename": "add_blogpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change blog post",
+    "content_type": 7,
+    "codename": "change_blogpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete blog post",
+    "content_type": 7,
+    "codename": "delete_blogpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view blog post",
+    "content_type": 7,
+    "codename": "view_blogpost"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 8,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 8,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 8,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 8,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 9,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 9,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 9,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 9,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add search query",
+    "content_type": 10,
+    "codename": "add_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change search query",
+    "content_type": 10,
+    "codename": "change_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete search query",
+    "content_type": 10,
+    "codename": "delete_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view search query",
+    "content_type": 10,
+    "codename": "view_searchquery"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Cookie Group",
+    "content_type": 11,
+    "codename": "add_cookiegroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Cookie Group",
+    "content_type": 11,
+    "codename": "change_cookiegroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Cookie Group",
+    "content_type": 11,
+    "codename": "delete_cookiegroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Cookie Group",
+    "content_type": 11,
+    "codename": "view_cookiegroup"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Cookie",
+    "content_type": 12,
+    "codename": "add_cookie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Cookie",
+    "content_type": 12,
+    "codename": "change_cookie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Cookie",
+    "content_type": 12,
+    "codename": "delete_cookie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Cookie",
+    "content_type": 12,
+    "codename": "view_cookie"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add Log item",
+    "content_type": 13,
+    "codename": "add_logitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change Log item",
+    "content_type": 13,
+    "codename": "change_logitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete Log item",
+    "content_type": 13,
+    "codename": "delete_logitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view Log item",
+    "content_type": 13,
+    "codename": "view_logitem"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$hv6Mt6FwW1oS5E0Ca33VKP$VwlZdNDIS+2hvvzBl9oUSZanWUaTAjoZxW9f7h+ekCg=",
+    "last_login": "2022-11-04T10:58:52.097Z",
+    "is_superuser": true,
+    "username": "alexacraman",
+    "first_name": "",
+    "last_name": "",
+    "email": "acramanalex@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-08-23T14:23:00.451Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$pJ1zsMucFCMuk0jtZb4zKW$p8JKigsvlVVXC2sfMCiy+Wd9f/VuAnrIL+mTfi3coMI=",
+    "last_login": "2022-10-20T15:35:19.579Z",
+    "is_superuser": false,
+    "username": "cheese",
+    "first_name": "",
+    "last_name": "",
+    "email": "cheese@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-20T15:35:07.650Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "diary",
+    "model": "blogpost"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "diary",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "search",
+    "model": "searchquery"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "cookie_consent",
+    "model": "cookiegroup"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "cookie_consent",
+    "model": "cookie"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "cookie_consent",
+    "model": "logitem"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "53sgomyo03ctg46hd0tw4ky1oy9iupfw",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAURO_iGlneF0r6nMGy_3dwANlSnFSIu-NIKaCZYua9eZMQ962Evec1LEiuRJDLb5ciPHM9BnzEem8UWt3WJdEDoefa6dQwv24n-3dQYi_D1kqj5ZL7bI2ToBkKxkz0yI1HhyyrGcFqpcCPBPAQlRRCJiFmNyzy-QK9qzce:1olXZn:AUgwSrR63qNiJ4mszqJI8epF9O5HZaPiQEjgNjA6lOc",
+    "expire_date": "2022-11-03T15:35:19.582Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5452e1q7lxtiq8xfey3xtbj32c1pmne8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8mbp07zeQgQGpGkhKuzL-uzbpQrf3nHNfLOC21rCNvISZ2JlJdvrdIqZHbjugO7Zb56m3dZkj3xV-0MGvnfLzcrh_BxVH_dYerFKWEEAJq0kJAZKMNXpKWFKxdpJCSQHgJDmvigGRIhkAr6ND0uz9AaTjNoI:1oR86b:uBj-Ru-3i8zakvtY1U4Nxu2nCEoCHR4wDHw4L0TyG1E",
+    "expire_date": "2022-09-08T08:20:49.065Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ya60lj5aw5mppvkqhp68e7j193hwb2ci",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8mbp07zeQgQGpGkhKuzL-uzbpQrf3nHNfLOC21rCNvISZ2JlJdvrdIqZHbjugO7Zb56m3dZkj3xV-0MGvnfLzcrh_BxVH_dYerFKWEEAJq0kJAZKMNXpKWFKxdpJCSQHgJDmvigGRIhkAr6ND0uz9AaTjNoI:1oquPU:t98EmBHKevnJoHnIzYJz3AcVFz-8iJUvwBVcgml6BSw",
+    "expire_date": "2022-11-18T10:58:52.101Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zufpaq6a4kbl8u6yrgj57uy8a913ao1m",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSG8mbp07zeQgQGpGkhKuzL-uzbpQrf3nHNfLOC21rCNvISZ2JlJdvrdIqZHbjugO7Zb56m3dZkj3xV-0MGvnfLzcrh_BxVH_dYerFKWEEAJq0kJAZKMNXpKWFKxdpJCSQHgJDmvigGRIhkAr6ND0uz9AaTjNoI:1olqDk:nAS0tyVAU-h9maHOg-JgLOgF3CygcE5fzYDcIfXDhT0",
+    "expire_date": "2022-11-04T11:29:48.537Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
   "model": "diary.blogpost",
   "pk": 1,
   "fields": {
@@ -218,9 +892,41 @@
     "title": "Jak Inhibitors",
     "slug": "jak-inhibitors",
     "content": "I thought nothing could ever work or even take the edge of theses horrendous symptoms, other than cyclosporine. \r\n\r\nIf you are reading this you will know that in the UK you are only supposed to be on Cyclosporine for a year and in some exceptional circumstances a couple of years. After that they want you off it for fears of renal injury. \r\n\r\nI have failed so many different drug attempts. I desperately wanted Dupilumab to work and tried it several times but it barely took the edge of. I additionally tried Methatrexate injections on a couple of occasions but again the symptoms came back with a vengeance. So bad in fact that I questioned whether I could go on and thought I was done and needed to find a way out. I also tried Abrocinatib as they said it was doing well in the trials so I did a straight switch to it but the symptoms were horrendous again .\r\n\r\nThe symptoms I cannot cope with physically and mentally are when I am pouring with ooze, waking up in the morning next to my wife soaking wet with my pyjamas and bed sheets stuck to me, fiercely itchy all over, inflammation all over my body, burning and flaking away. This is my experience even after three and a half years without cyclosporine. \r\n\r\nThere is a degree of symptoms which I can tolerate and certainly in the first year I tried taking the disease head on but after months and months of no progress cyclosporine gave me some life back. I initially felt like a failure as the internet is full of people who have healed from this disease and not used immunosuppressants. Resorting to using them makes you feel somewhat inadequate in comparison to them. \r\nHowever, I know I don't have the mental strength to not use them and I will not get through this without help. \r\n\r\nI honestly believed that nothing else could help but I was wrong. I have now been a on a new drug for two months called upadacitinib. I crossed the drugs over for three weeks to avoid a crash but for the first time in two and half or so years I have been able to come off cyclosporine. I am still in disbelief that this is the case. \r\n\r\n I don't believe that any drug is ever going to be perfect. My skin is very dry and I still have rashes that present all over which are itchy but it doesn't seem to be that bone deep itch that you get with tsw. \r\n\r\nIf you are in a similar position to me being forced off cyclosporine and losing hope that anything else will ever help or make a difference to the hellish symptoms,  I hope this article will give you some encouragement.",
-    "publish_date": "2022-08-23T14:25:03Z",
+    "publish_date": "2022-08-23T19:25:03Z",
     "timestamp": "2022-08-23T14:25:05.649Z",
-    "updated": "2022-08-23T14:25:05.649Z"
+    "updated": "2022-10-21T11:31:04.522Z"
+  }
+},
+{
+  "model": "diary.blogpost",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "image": "",
+    "title": "Impossible decision.",
+    "slug": "Impossible-decision",
+    "content": "In my last entry, which wasn't very long ago, I welcomed and praised the surprising effectiveness of Upadacinitib and it certainly works well in terms of clearing my skin. I wanted other people to know that for those who want or need medication to help with their symptoms there is something that helps other than cyclosporine. \r\n\r\nHowever, I had my quarterly appointment last Wednesday and all seemed well other than the fact that I seem to be gaining weight quite rapidly, despite taking measures to lose some. Regardless, I did my bloods as per usual. The following Monday I received a call from the nurse telling me that i needed to do a repeat blood test as one of my results wasn’t looking good. That was my liver. \r\n\r\nBefore starting the drug my baseline liver level was 20 and they tell me the lower limit is 4 and the upper limit is 59. That morning she rang to tell me I had exceeded the upper limit and was on 63 but I didn’t need to worry at this stage and just needed to do another blood test. After having this follow up blood test my levels have gone up again to 74 and that is just over a week since my appointment. And yet still they want me to continue on this drug at the same dosage.I was informed that I could just choose to stop but there are not many options for me. What I don’t understand is why they will not try a lower dose of the drug. I really don’t understand this. I was even told it might be unrelated. Which of course it cannot be, nothing else has changed other than the introduction of the drug, therefore , this is certainly not a coincidence.She also asked me if I was a drinker. I haven’t had any alcohol since August 2018. I have indeed told them this many times.\r\n\r\nWell at this point my mental health just crashed and I hit rock bottom. My liver obviously is not coping and there is not a strategy or any proactiveness in place to do something about this and I am supposed to just continue. I feel I am now faced with either driving my liver into the ground and having clear skin or allowing my liver to heal and suffering horrendously again. Just the thought of the latter throws up all the trauma of what I’ve been through and this option terrifies me. How can I possibly chose to wake up next to my wife soaking wet from ooze, sore and freezing cold ,only able to sleep in hot bath water, being tormented by a bone deep itch that tortures you to the very core of your being.The truth is I know I can’t face this again, not physically or mentally. The alternate option doesn’t look to good either. Running another organ into the ground and suffering the consequences of that. \r\n\r\nSo, where do you begin to make such a decision. One thing I do know is that I do not want to procrastinate remaining undecided is a bad decision. To hope things will just improve on there own is just futile thinking and will lead me nowhere good. \r\n\r\nI still have hope in one day being free of this burden and I still have to take courage in the message from Dr Rapaport that this will come to an end. My healing objective still remains and I need help to get to the end. But how to move forward right now seems impossible.",
+    "publish_date": "2022-11-04T11:11:27Z",
+    "timestamp": "2022-11-04T11:11:48.616Z",
+    "updated": "2022-11-04T11:11:48.617Z"
+  }
+},
+{
+  "model": "search.searchquery",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "query": "tsw",
+    "timestamp": "2022-08-23T20:13:19.717Z"
+  }
+},
+{
+  "model": "search.searchquery",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "query": "tsw",
+    "timestamp": "2022-08-23T20:13:59.498Z"
   }
 }
 ]
