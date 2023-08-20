@@ -11,7 +11,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk', 'red-sleeves.fly.dev']
+ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk', 'red-sleeves.fly.dev','process.redsleeves.co.uk',]
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')

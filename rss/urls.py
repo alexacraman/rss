@@ -30,6 +30,7 @@ sitemaps = {
 urlpatterns = [
     path('', home, name='home'),
     path('diary/', include('diary.urls')),
+    path('process/', include('process.urls', namespace='process')),
     path('contact/', contactView, name='contact'),
     path('about/', about, name='about'),
     path('gallery/', gallery, name='gallery'),

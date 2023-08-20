@@ -41,12 +41,35 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'diary',
     'search',
+    'corsheaders',
    
 ]
-
+#List of origins authorised to make requests.
+CORS_ALLOWED_ORIGINS = [
+ 'http://localhost:8000',
+ 'http://127.0.0.1:8000',
+ 'https://www.eoceanweb.com',
+]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://www.eoceanweb.com',
+     'http://127.0.0.1:8000',
+]
+CORS_ALLOWED_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+    'X-CSRFToken'
+)
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',

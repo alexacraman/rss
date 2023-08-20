@@ -42,88 +42,104 @@ grid-column: span 3;
 animation: shinters 1s ; 
 background-color:rgba(0,0,0,0.0);
 transition: 1s background-color;
+background-color: transparent;
+background: url('../images3/3.jpg') ; 
+background-position: center;
+background-size: cover; 
 }
-.pic1:hover{
+/* .pic1:hover{
 transition: 1s background;
 background-color: transparent;
 background: url('../images3/3.jpg') ; 
 background-position: center;
 background-size: cover;   
-}
-.pic1::after{
+} */
+/* .pic1::after{
 color:grey;
 content:"Warning. Graphic images of poorly skin. Hover to view";
 }
 .pic1:hover::after{
     content:" ";
-}
+} */
 .pic2{
     width: 301px;    
     animation: shinters 1s ; 
     grid-column: span 1;
     background-color:rgba(0,0,0,0.0);
     transition: 1s background-color;
+    background-color: transparent;  
+    background: url('../images/6.jpg')  ; 
+    background-position: center;
+    background-size: cover; 
 }
-.pic2:hover{
+/* .pic2:hover{
     transition: 1s background;
     background-color: transparent;  
     background: url('../images/6.jpg')  ; 
     background-position: center;
     background-size: cover;           
-}
-.pic2::after{
+} */
+/* .pic2::after{
    
     color:grey;
     content:"Warning. Graphic images of poorly skin. Hover to view "; 
 }
 .pic2:hover::after{
 content:" ";
-}
+} */
 .pic3{
 grid-column: 2/3;
 width: 100px;
 animation: shonters 2s ;
 background-color:rgba(0,0,0,0.0);
 transition: 1s background-color;
+background-color: transparent;  
+background: url('../images3/9.jpg') no-repeat;   
+background-size: cover;  
         
 } 
-.pic3:hover{
+/* .pic3:hover{
     transition: 1s background;
     background-color: transparent;  
     background: url('../images3/9.jpg') no-repeat;   
     background-size: cover;  
-    /* background-position: center; */
 }
-.pic3::after{
+    /* background-position: center; */
+
+/* .pic3::after{
     
     color:grey;
     content:"Warning. Graphic images of poorly skin. Hover to view "; 
 }
 .pic3:hover::after{
     content:" ";
-}
+} */
     .pic4{
     grid-column: 3/4;
     width: 300px;
     animation: shanters 1s ;
     background-color:rgba(0,0,0,0.0);
     transition: 1s background-color;
+   
+    background-color: transparent;  
+        background: url('../images3/v_red.jpg') no-repeat;  
+        background-size: cover;  
     }
-    .pic4:hover{
+    /* .pic4:hover{
         transition: 1s background;
     background-color: transparent;  
         background: url('../images3/v_red.jpg') no-repeat;  
         background-size: cover;  
-        /* background-position: center;            */
-    } 
-    .pic4::after{
+        /* background-position: center;    }        */
+     
+    /* .pic4::after{
       
         color:grey;
         content:"Warning. Graphic images of poorly skin. Hover to view "; 
     }
     .pic4:hover::after{
         content:" ";
-    }
+    } */
     .pic5{
     grid-column: 1 / 4;
     width: 500px;
@@ -131,22 +147,25 @@ transition: 1s background-color;
     transition: 1s background-color;
     animation: shenters 2s;
     animation-fill-mode: forwards;
+    /* transition: 1s background; */
+        background-color: transparent;  
+        background: url('../images3/v_red2.jpg') no-repeat ;   
     /* transform:translateX(10rem);  
     transition:transform 1s ease 2s; */
     }
-    .pic5:hover{
+    /* .pic5{
         transition: 1s background;
         background-color: transparent;  
         background: url('../images3/v_red2.jpg') no-repeat ;   
-    }
-    .pic5::after{
+    } */
+    /* .pic5::after{
         
         color:grey;
         content:"Graphic images. Viewer discretion advised "; 
     }
     .pic5:hover::after{
         content:" ";
-    }
+    } */
 
 
     #myTopBtn{position: fixed; display: none; z-index: 1; bottom:20px ;right:5px; border-radius: 5%;}
