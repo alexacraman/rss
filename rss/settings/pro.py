@@ -5,8 +5,6 @@ from pathlib import Path
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
 
-
-
 SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
@@ -21,11 +19,9 @@ EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'RedSleeves <acramanalex@gmail.com>'
 EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
 
-
 MANAGERS = (
     ('Alex Acraman','acramanalex@gmail.com' )
 )
-
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -36,6 +32,4 @@ SECURE_HSTS_PRELOAD             = True
 
 SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting the session cookie over HTTP accidentally.
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
-
-
 SECURE_SSL_REDIRECT             = False

@@ -24,8 +24,6 @@ MESSAGE_TAGS = {
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
-
-
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
@@ -52,6 +50,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
+    'https://www.eoceanweb.com/',
     'https://www.eoceanweb.com',
      'http://127.0.0.1:8000',
 ]
