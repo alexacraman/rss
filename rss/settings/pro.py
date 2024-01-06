@@ -34,6 +34,12 @@ SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting t
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
 SECURE_SSL_REDIRECT             = False
 
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(
+    default=env("DATABASE_URL"),
+    conn_max_age=600,
+    conn_health_checks=True,
+)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
