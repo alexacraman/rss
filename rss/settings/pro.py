@@ -37,7 +37,7 @@ SECURE_SSL_REDIRECT             = False
 
 # Use dj_database_url to parse the DATABASE_URL environment variable
 # This variable should be set in your environment or in a .env file
-DATABASE_URL = env.get('DATABASE_URL')
+DATABASE_URL = env('DATABASE_URL')
 
 # Update the DATABASES setting in your Django project settings
 DATABASES = {
