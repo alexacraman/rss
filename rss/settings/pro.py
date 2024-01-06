@@ -34,12 +34,13 @@ SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting t
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
 SECURE_SSL_REDIRECT             = False
 
-
-# Use dj_database_url to parse the DATABASE_URL environment variable
-# This variable should be set in your environment or in a .env file
-DATABASE_URL = env('DATABASE_URL')
-
-# Update the DATABASES setting in your Django project settings
 DATABASES = {
-    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgresql_rss",
+        "USER": "postgresql_rss",
+        "PASSWORD": env('PASSWORD'),
+        "HOST": env("HOST"),
+        "PORT": "5432",
+    }
 }
