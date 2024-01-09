@@ -40,14 +40,14 @@ DATABASES['default'] = dj_database_url.config(
     conn_max_age=600,
     conn_health_checks=True,
 )
-DATABASE_URL = env('DATABASE_URL')
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgresql_rss",
-        "USER": "postgresql_rss",
-        "PASSWORD": env('PASSWORD'),
-        "HOST": env("HOST"),
-        "PORT": "5432",
-    }
-}
+# DATABASE_URL = env('DATABASE_URL')
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgresql_rss",
+#         "USER": "postgresql_rss",
+#         "PASSWORD": env('PASSWORD'),
+#         "HOST": env("HOST"),
+#         "PORT": "5432",
+#     }
+# }
