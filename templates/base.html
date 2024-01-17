@@ -49,6 +49,15 @@
     </button>
     {{ message }}
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const closeBtn = document.querySelector('.close');
+      const alertDiv = document.querySelector('.alert');
+      closeBtn.addEventListener('click',(event)=>{
+       alertDiv.style.display = 'none'
+      })
+    })
+  </script>
 {% endfor %}
   <body>
     <button class="border border-info  bg-dark text-info" onclick="topFunction()" id="myTopBtn" >&#8657;</button>

@@ -4,16 +4,22 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+asgiref = "==3.7.2"
+dj-database-url = "==2.1.0"
 django = "==3.2"
-whitenoise = "*"
-pillow = "*"
-psycopg2-binary = "*"
-dj-database-url = "*"
-gunicorn = "*"
-django-environ = "*"
-django-cors-headers = "*"
+django-appconf = "==1.0.5"
+django-cors-headers = "==4.2.0"
+django-environ = "==0.10.0"
+gunicorn = "==21.2.0"
+packaging = "==23.1"
+pillow = "==10.0.0"
+psycopg2-binary = "==2.9.7"
+pytz = "==2023.3"
+sqlparse = "==0.4.4"
+typing-extensions = "==4.7.1"
+whitenoise = "==6.5.0"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"

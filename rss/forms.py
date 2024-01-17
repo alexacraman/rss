@@ -1,5 +1,4 @@
 from django import forms
- 
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -34,10 +33,19 @@ class ContactForm(forms.Form):
 
     def clean_email(self, *args, **kwargs):
         email = self.cleaned_data.get('email')
-        print(email)
         if email.endswith(".edu"):
             raise forms.ValidationError("This is not a valid email. Please don't use .edu.")
         return email
+    
+    forbidden_words = ['seo', 'ranking', 'whitehat', 'ranks', 'organically','keywords']
+
+    def clean_message(self, *args, **kwargs):
+        message = self.cleaned_data.get('message')
+        for keyword in self.forbidden_words:
+            if keyword.lower() in message.lower():
+                raise forms.ValidationError("Forbidden")
+        return message
+
     
 class UserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True, label='Email')

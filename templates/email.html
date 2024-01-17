@@ -28,5 +28,22 @@
 </div>
 <br>
 {{ text }}
+<!-- <script>
+          const message = document.querySelector('#id_message');
 
+          message.addEventListener('input', (event) => {
+    const forbiddenWords = ['seo', 'ranking', 'SEO', 'whitehat', 'keywords'];
+    let inputValue = event.target.value;
+
+    forbiddenWords.forEach((word) => {
+        const regex = new RegExp(`\\b${word}\\b`, 'gi'); // Case-insensitive whole word match
+        inputValue = inputValue.replace(regex, ''); // Remove forbidden words
+    });
+
+    event.target.value = inputValue; // Update the input value
+
+    // Optionally, you can perform additional actions here if needed.
+    // For example, you can show a message to the user or trigger other validation checks.
+});
+</script> -->
 {% endblock %}
