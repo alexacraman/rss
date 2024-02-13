@@ -1,116 +1,60 @@
-.DS_Store
-# Django #
-*.log
-*.pot
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.pyc
-__pycache__
-db.sqlite3
-media
-aws/
-rootkey.csv
-# Backup files # 
-*.bak 
+*.pyo
+*.pyd
 
-# If you are using PyCharm # 
-.idea/**/workspace.xml 
-.idea/**/tasks.xml 
-.idea/dictionaries 
-.idea/**/dataSources/ 
-.idea/**/dataSources.ids 
-.idea/**/dataSources.xml 
-.idea/**/dataSources.local.xml 
-.idea/**/sqlDataSources.xml 
-.idea/**/dynamic.xml 
-.idea/**/uiDesigner.xml 
-.idea/**/gradle.xml 
-.idea/**/libraries 
-*.iws /out/ 
+# Ignore local configuration files
+/settings/*.py
 
-# Python # 
-*.py[cod] 
-*$py.class 
+# Django development settings
+*.sqlite3
+*.db
 
-# Distribution / packaging 
-.Python build/ 
-develop-eggs/ 
-dist/ 
-downloads/ 
-eggs/ 
-.eggs/ 
-lib/ 
-lib64/ 
-parts/ 
-sdist/ 
-var/ 
-wheels/ 
-*.egg-info/ 
-.installed.cfg 
-*.egg 
-*.manifest 
-*.spec 
+# Logs and databases
+*.log
+*.sql3
 
-# Installer logs 
-pip-log.txt 
-pip-delete-this-directory.txt 
+# Static files
+/static/
 
-# Unit test / coverage reports 
-htmlcov/ 
-.tox/ 
-.coverage 
-.coverage.* 
-.cache 
-.pytest_cache/ 
-nosetests.xml 
-coverage.xml 
-*.cover 
-.hypothesis/ 
+# Media files
+/media/
 
-# Jupyter Notebook 
-.ipynb_checkpoints 
+# Virtual environment
+venv/
+env/
 
-# pyenv 
-.python-version 
+# IDE files
+.vscode/
+.idea/
 
-# celery 
-celerybeat-schedule.* 
+# Ignore pipenv virtual environment
+Pipfile
+Pipfile.lock
 
-# SageMath parsed files 
-*.sage.py 
+# Ignore local configuration files
+base.py
+pro.py
+local.py 
 
-# Environments 
-.env 
-.venv 
-env/ 
-venv/ 
-ENV/ 
-env.bak/ 
-venv.bak/ 
+# Ignore environment variable file
+.env
 
-# mkdocs documentation 
-/site 
+# Node.js
+node_modules/
 
-# mypy 
-.mypy_cache/ 
+# npm
+package-lock.json
+package.json
 
+#tailwind
+postcss.config.js
+tailwind.config.js
 
-# sftp configuration file 
-sftp-config.json 
+# Docker
+Dockerfile
 
-# Package control specific files Package 
-Control.last-run 
-Control.ca-list 
-Control.ca-bundle 
-Control.system-ca-bundle 
-GitHub.sublime-settings 
-
-# Visual Studio Code # 
-.vscode/* 
-!.vscode/settings.json 
-!.vscode/tasks.json 
-!.vscode/launch.json 
-!.vscode/extensions.json 
-.history
-
-#django
-local.py
-js/cdn.js
+#fly
+fly.toml
