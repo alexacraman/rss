@@ -37,7 +37,7 @@ class ContactForm(forms.Form):
             raise forms.ValidationError("This is not a valid email. Please don't use .edu.")
         return email
     
-    forbidden_words = ['seo', 'ranking', 'whitehat', 'ranks', 'organically','keywords','baclink', 'toxic', 'profile', 'toxicity','Stacking','comprehensive','metrics']
+    forbidden_words = ['seo', 'ranking', 'whitehat', 'ranks','hacked','Bitcoin', 'compromised', 'organically','keywords','baclink', 'toxic', 'profile', 'toxicity','Stacking','comprehensive','metrics']
 
     def clean_message(self, *args, **kwargs):
         message = self.cleaned_data.get('message')
