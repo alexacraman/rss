@@ -35,12 +35,12 @@ Pipfile
 Pipfile.lock
 
 # Ignore local configuration files
-base.py
-pro.py
+# base.py
+# pro.py
 local.py 
 
 # Ignore environment variable file
-.env
+# .env
 
 # Node.js
 node_modules/

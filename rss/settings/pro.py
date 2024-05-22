@@ -6,7 +6,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 
 SECRET_KEY = env('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk']
 
@@ -33,6 +33,12 @@ SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting t
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
 SECURE_SSL_REDIRECT             = False
 
+
+print("PGDATABASE:", env('PGDATABASE', default="Not set"))
+print("PGUSER:", env('PGUSER', default="Not set"))
+print("PGPASSWORD:", env('PGPASSWORD', default="Not set"))
+print("PGHOST:", env('PGHOST', default="Not set"))
+print("PGSSLMODE:", env('PGSSLMODE', default="Not set"))
 
 DATABASES = {
     'default': {
