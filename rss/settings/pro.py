@@ -1,6 +1,5 @@
 from .base import *
 import environ
-from pathlib import Path
 
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
@@ -16,7 +15,7 @@ ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk']
 # EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# DEFAULT_FROM_EMAIL = 'RedSleeves'
+DEFAULT_FROM_EMAIL = 'RedSleeves'
 # EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
 
 MANAGERS = (
@@ -33,6 +32,7 @@ SECURE_HSTS_PRELOAD             = True
 SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting the session cookie over HTTP accidentally.
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
 SECURE_SSL_REDIRECT             = False
+
 
 DATABASES = {
     'default': {
