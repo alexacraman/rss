@@ -1,13 +1,13 @@
 import urllib
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.views.decorators.http import require_GET
 from django.urls import reverse_lazy
 from .forms import UserCreationForm, ContactForm
 from django.views import generic
-# Dont Repeat Yourself = DRY
+
 
 from diary.models import BlogPost
 from .forms import ContactForm

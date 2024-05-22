@@ -9,15 +9,15 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk', '.vercel.app']
+ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'RedSleeves <acramanalex@gmail.com>'
-EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'RedSleeves'
+# EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
 
 MANAGERS = (
     ('Alex Acraman','acramanalex@gmail.com' )
@@ -34,20 +34,16 @@ SESSION_COOKIE_SECURE           = True #Set this to True to avoid transmitting t
 CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting the CSRF cookie over HTTP accidentally.
 SECURE_SSL_REDIRECT             = False
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(
-    default=env("DATABASE_URL"),
-    conn_max_age=600,
-    conn_health_checks=True,
-)
-# DATABASE_URL = env('DATABASE_URL')
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "postgresql_rss",
-#         "USER": "postgresql_rss",
-#         "PASSWORD": env('PASSWORD'),
-#         "HOST": env("HOST"),
-#         "PORT": "5432",
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': env('PGDATABASE'),
+        'USER': env('PGUSER'),
+        'PASSWORD': env('PGPASSWORD'),
+        'HOST': env('PGHOST'),
+        'PORT': '5432',  
+        'OPTIONS': {
+            'sslmode': env('PGSSLMODE'),
+        },
+    }
+}

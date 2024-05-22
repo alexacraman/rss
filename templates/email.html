@@ -4,9 +4,9 @@
 
 {% block content %}
 
-{% if title %}
-    <h1>{{ title }}</h1>
-{% endif %}
+
+    <h4 class="text-center text-danger">Sorry, not currently taking emails.</h4>
+
 <div class='container mt-5 '>
     <div class="row border">
         
@@ -20,7 +20,7 @@
         <div class="col-12 col-lg-6">
             <form method='POST' action='.' enctype='multipart/form-data' class="form-group p-5"> {% csrf_token %}
                 {{ form.as_p }}
-                <button type='submit' class="btn btn-cool border-info border-2 border">Submit</button>
+                <button type='submit' class="btn btn-cool border-info border-2 border disabled">Submit</button>
                 <small id="emailHelp" class="form-text text-muted">I will never share your email with anyone else.</small>
             </form> 
         </div>
