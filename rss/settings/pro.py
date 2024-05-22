@@ -8,7 +8,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk']
+ALLOWED_HOSTS = ['www.redsleeves.co.uk', 'redsleeves.co.uk','red-skin-syndrome.onrender.com']
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = env('EMAIL_HOST_USER')
