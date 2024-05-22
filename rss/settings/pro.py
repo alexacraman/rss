@@ -34,12 +34,6 @@ CSRF_COOKIE_SECURE              = True #Set this to True to avoid transmitting t
 SECURE_SSL_REDIRECT             = False
 
 
-print("PGDATABASE:", env('PGDATABASE', default="Not set"))
-print("PGUSER:", env('PGUSER', default="Not set"))
-print("PGPASSWORD:", env('PGPASSWORD', default="Not set"))
-print("PGHOST:", env('PGHOST', default="Not set"))
-print("PGSSLMODE:", env('PGSSLMODE', default="Not set"))
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
